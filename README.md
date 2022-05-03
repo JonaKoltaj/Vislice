@@ -1,4 +1,3 @@
 # Vislice
 
-Najtemačnejša otroška igra. //
-Hecko
+Programiranje vislic kot primer projektne naloge za UVP.
