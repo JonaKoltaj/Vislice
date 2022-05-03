@@ -7,4 +7,4 @@ Programiranje vislic kot primer projektne naloge za UVP.
 K projektu so prispevali:
 
 - Jona Koltaj
-- profesorji in asistenti
+- profesorji in asistenti na fmf
