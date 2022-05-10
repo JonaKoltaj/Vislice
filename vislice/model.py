@@ -1,9 +1,10 @@
-STEVILO_DOVOLJENIH_NAPAK = 10
+STEVILO_DOVOLJENIH_NAPAK = 9
 PRAVILNA_CRKA = "+"
 PONOVLJENA_CRKA = "o"
 NAPACNA_CRKA = "-"
 ZMAGA = "W"
 PORAZ = "X"
+ZACETEK = "z"
 
 class Igra:
 
@@ -64,3 +65,25 @@ import random
 def nova_igra():
     geslo = random.choice(bazen_besed)
     return Igra(geslo)
+
+class Vislice:
+
+    def __init__(self):
+        self.igre = {}
+
+    def prost_id_igre(self):
+        if not self.igre:
+            return 0
+        else:
+            return max(self.igre.keys()) + 1
+    
+    def nova_igra(self):
+        i = self.prost_id_igre()
+        igra = nova_igra()
+        self.igre[i] = (igra, ZACETEK)
+        return i
+    
+    def ugibaj(self, i, crka):
+        igra, stanje = self.igre[i]
+        stanje = igra.ugibaj(crka)
+        self.igre[i] = (igra, stanje)
