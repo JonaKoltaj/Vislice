@@ -36,7 +36,7 @@ class Igra:
             if crka in self.crke:
                 niz += crka
             else:
-                niz += "_"
+                niz += "_ "
         return niz
 
     def nepravilni_ugibi(self):
